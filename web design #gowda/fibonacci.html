@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+</head>
+<body bgcolor="lightblue">
+    <h2>fibonacci series</h2>
+    <input type = "number" id = "n">
+    <button onclick = "checker()"> submit</button>
+    <p id = "result"></p>
+
+    <script>
+        function checker() {
+            let n = document.getElementById("n").value;
+
+            let a=0,b=1,c;
+            s= "";
+
+            for(let i=0;i<=n;i++) {
+                s = s + a + "";
+                c = a+b;
+                a = b;
+                b = c;
+            }
+            document.getElementById("result").innerHTML = s;
+        }
+    
+    
+    </script>
+</body>
+</html>

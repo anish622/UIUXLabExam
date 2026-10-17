@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- Program 6: To-Do List (JS)
+     Create a To-Do list where the user types a task and clicks Add. Using JavaScript, append each
+     task as a list item showing the task text along with Edit and Delete buttons, and alert the
+     user if the task field is empty. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+    <h1 align = "center">To-Do List</h1>
+    <br>
+    <input type="text" name="task" id="task">
+    <button id="add" onclick="addTask()">Add</button>
+    <ol id="tlist"></ol>
+    <script>
+        function addTask(){
+            let task = document.getElementsById("task").value;
+            if(task==""){
+                alert("Please enter a task");
+                return;
+            };
+
+            let li = document.createElement("li");
+            let taskText = document.createElement("span");
+            taskText.textContent = task;
+
+            let editButton = document.createElement("button");
+            editButton.textContent= "Edit";
+            editButton.onclick = function(){
+                editTask(taskText);
+            };
+
+            let deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+            deleteButton.onclick = function(){
+                deleteTask(li);
+            };
+
+            li.appendChild(taskText);
+            li.appendChild(editButton);
+            li.appendChild(deleteButton);
+            document.getElementById("tlist").appendChild(li);
+            document.getElementById("task").value="";
+        }
+        function editTask(taskText){
+            let newTask = prompt("Edit Task:", taskText.textContent)
+
+            if(newTask != null && newTask != ""){
+                taskText.textContent = newTask;
+            }
+        }
+
+        function deleteTask(li){
+            li.remove();
+        }
+    </script>
+</body>
+</html>

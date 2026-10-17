@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback form</title>
+</head>
+<body>
+    <h1 align = "center">Feedback form</h1>
+    <body style = "background-color: lightblue;">
+
+    Name : <input type = "text" name = "name" placeholder="enter your name" required>
+    email: <input type = "text" name = "name" placeholder = "enter an email" required>
+    password : <input type = "password" placeholder = "enter your name" required>
+
+    moods
+    <ul>
+        <li> happy <input type = "checkbox"></li>
+        <li> sad <input type = "checkbox"></li>
+        <li> angry <input type = "checkbox"></li>
+        <li> neutral <input type = "checkbox"></li>
+    </ul>
+    
+    fatisfaction
+    <ul>
+        <li> very satisfied <input type = "radio" name = "services"></li>
+        <li> satisfied <input type = "radio" name = "services"></li>
+        <li> dissatisfied <input type = "radio" name = "services"></li>
+        <li> very dissatisfied <input type = "radio" name = "services"></li>
+    </ul>
+
+    <textarea name = "comments" id = "comments"></textarea> 
+
+    bio photo
+    <input type = "file" name = "biophoto" accet = "image/*"><br>
+
+    location visited
+
+    <select name = "locationvisites" required>
+        <option value = "india"> India </option>
+        <option value = "australia"> Australia </option>
+        <option value = "japan"> Japan </option>
+        
+    </select>
+
+    <input type = "submit" name = "submit" id = "submit">
+</body>
+</html>

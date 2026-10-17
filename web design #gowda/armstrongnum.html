@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong</title>
+</head>
+<body bgcolor = "lightblue">
+    <h1> Armstrong number checker</h1>
+    <input type = "number" id = "n">
+    <button onclick = "checker()"> submit</button>
+    <p id = "result"></p>
+
+    <script>
+        function checker() {
+            let n = document.getElementById("n").value;
+            let sum = 0;
+            let temp=n;
+
+            while(temp>0) {
+                let r = temp%10;
+                sum= sum + r*r*r;
+                temp = Math.floor(temp/10);
+            }
+
+            if(sum==n){
+                document.getElementById("result").innerHTML = "armstrong number";
+            } else {
+                document.getElementById("result").innerHTML = "not a armstrong number";
+            }
+        }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Example</title>
+    <script language = "javascript">
+        function submitinfo() {
+            if(qz.log.value =="") {
+                alert("Please enter a username");
+            }
+            else if(qz.pan.value =="") {
+                alert("Please enter a password");
+            }
+            else {
+                alert("login succesfull")
+            }
+        }
+    </script>
+</head>
+<body bgcolor="yellow">
+    <form name ="qz">
+        <h1> welcome to</h1>
+        <h2> Nuelearn</h2>
+
+        login name : <input type = "text" name = "log" value = ""><br><br>
+        password :   <input type = "password" name = "pan" value = ""><br><br>
+
+        <input type = "button" value = "submit" onclick = "submitinfo()">
+
+        
+    </form>
+    
+</body>
+</html>
